@@ -8,7 +8,6 @@ using Humanizer;
 using Lavalink4NET;
 using Lavalink4NET.DSharpPlus;
 using Lavalink4NET.Lyrics;
-using Lavalink4NET.Player;
 using Lavalink4NET.Rest;
 using Lavalink4NET.Tracking;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +31,6 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using SDiscordSink;
@@ -40,9 +38,7 @@ using SilverBotDS.Objects.Database.Classes;
 using SilverBotDS.Objects.Classes;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using System.Text.Json;
 using DSharpPlus.CommandsNext.Exceptions;
-using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 using Serilog.Events;
 using SixLabors.Fonts;
 
@@ -121,7 +117,6 @@ namespace SilverBotDS
             }
             return true;
         }
-
         private static async Task MainAsync(string[] args)
         {
             config = await Config.GetAsync();
@@ -291,8 +286,9 @@ namespace SilverBotDS
             commands.RegisterConverter(new LoopSettingsConverter());
             commands.RegisterConverter(new SongOrSongsConverter());
             commands.RegisterConverter(new TimeSpanConverter());
-            commands.RegisterCommands<Anime>();
             commands.RegisterCommands<Genericcommands>();
+            commands.RegisterCommands<Anime>();
+            commands.RegisterCommands<Hunger_Games>();
             commands.RegisterCommands<Emotes>();
             commands.RegisterCommands<ModCommands>();
             commands.RegisterCommands<Giphy>();

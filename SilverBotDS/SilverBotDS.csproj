@@ -21,6 +21,9 @@
     <Content Remove="Templates\Bibi\Titles.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Commands\HungerGamesRecources\Area\FarmArea.png" />
+    <None Remove="Commands\HungerGamesRecources\Area\GasArea.png" />
+    <None Remove="Commands\HungerGamesRecources\Area\LakeArea.png" />
     <None Remove="Exceptions\NewFile.txt" />
     <None Remove="Templates\adventure_time_template.png" />
     <None Remove="Templates\BibiLibCutout\1.png" />
@@ -132,6 +135,9 @@
     <Content Include="Templates\BibiLibFull\7.png" />
     <Content Include="Templates\BibiLibFull\8.png" />
     <Content Include="Templates\BibiLibFull\9.png" />
+    <EmbeddedResource Include="Commands\HungerGamesRecources\Area\FarmArea.png" />
+    <EmbeddedResource Include="Commands\HungerGamesRecources\Area\GasArea.png" />
+    <EmbeddedResource Include="Commands\HungerGamesRecources\Area\LakeArea.png" />
     <EmbeddedResource Include="Templates\BibiLibFull\Titles.json" />
     <EmbeddedResource Include="Templates\Bibi\12.png" />
     <EmbeddedResource Include="Templates\Bibi\13.png" />

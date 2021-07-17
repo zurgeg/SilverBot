@@ -305,7 +305,6 @@ namespace SilverBotDS.Commands
                                                 .SendAsync(ctx.Channel);
             }
         }
-
         [Command("user")]
         [Description("Get the info I know about a specified user")]
         public async Task Userinfo(CommandContext ctx, [Description("the user like duh")] DiscordUser a)
@@ -332,7 +331,12 @@ namespace SilverBotDS.Commands
         {
             await Userinfo(ctx,ctx.User);
         }
-
+        [Command("user")]
+        [Description("Get the info I know about a specified user")]
+        public async Task Userinfo(CommandContext ctx, [Description("the user like duh")] DiscordMember a)
+        {
+            await Userinfo(ctx, (DiscordUser)a);
+        }
 #pragma warning restore CA1822 // Mark members as static
     }
 }
