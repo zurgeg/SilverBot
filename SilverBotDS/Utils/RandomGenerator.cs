@@ -4,6 +4,9 @@ using System.Text.RegularExpressions;
 
 namespace SilverBotDS.Utils
 {
+    /// <summary>
+    /// A secure random generator
+    /// </summary>
     public class RandomGenerator : IDisposable
     {
         private readonly RNGCryptoServiceProvider _csp;

@@ -152,7 +152,8 @@ namespace SilverBotDS
             discord.UseInteractivity(new InteractivityConfiguration
             {
                 PollBehaviour = PollBehaviour.KeepEmojis,
-                Timeout = TimeSpan.FromSeconds(30)
+                Timeout = TimeSpan.FromSeconds(30),
+                PaginationBehaviour= PaginationBehaviour.WrapAround,
             });
             //set up XP and repeating things
             discord.MessageCreated += Discord_MessageCreated;

@@ -28,7 +28,7 @@ namespace SDBrowser
 
         public async Task<Stream> RenderUrlAsync(string url)
         {
-          return await (await _client.GetAsync(UrlOfRemote + "renderpage?url="+ HttpUtility.UrlEncode(url))).Content.ReadAsStreamAsync();
+          return await (await _client.GetAsync($"{UrlOfRemote}renderpage?url={HttpUtility.UrlEncode(url)}")).Content.ReadAsStreamAsync();
         }
     }
 }
